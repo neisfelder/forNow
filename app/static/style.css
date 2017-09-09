@@ -1,0 +1,312 @@
+/*
+amount count background color (and pill color): #0095e0
+section background color: #d6f1ff
+selected task color: #f7e96a
+*/
+
+html, body, .container-fluid {
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.container {
+	width: 100%;
+	margin: 0px;
+    padding: 0px;
+}
+
+
+/* -------------- Baseling BUTTON styling ----------------- */
+
+.org-btn {
+    background-color: #5badff;
+    color: white;
+    font-size: 15px;
+}
+
+.org-btn:hover {
+    color: white;
+}
+
+
+/*  -------------  Styling of Navigation Sidebar -------------  */
+
+.navSideBar {
+	float: left;
+	width: 230px;
+	height: 100%;
+    position: fixed;
+	z-index: 1;
+	background-color: #0095e0;
+	padding-left: 30px;
+}
+
+
+.navButton {
+    width: 100%;
+    margin:0px;
+    color: white;
+}
+
+.navButton a {
+    border: none;
+    border-radius: 0;
+    color: white;
+    margin: 0px;
+}
+
+.navButton a:hover {
+    color:#0095e0;
+}
+
+.navSideBar h2 {
+	float: left;
+	color: white;
+	font-size: 22px;
+	margin: 30px 30px 30px 10px;
+}
+
+.nav-items {
+    margin-top: 100px;
+}
+
+/*.nav-pills {
+	margin: 22px 20px 22px 20px;
+	width: 100%;
+	/*border: 2px solid gray;
+	border-radius: 7px;
+}*/
+
+.amountLabel {
+	border-radius: 100px;
+	color: white;
+	background-color: #0095e0;
+	text-align: center;
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	z-index: 2;
+	margin-left: 5px;
+	font-size: 15px;
+	padding: 4px 0px;
+	position: relative;
+	top: -5px;
+}
+
+
+
+/*  -------------  Styling of To-Do Lists -------------   */
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* Remove margins and padding from the list */
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.single-col-tab {
+	width: 80%;
+	min-width: 400px;
+}
+
+.list-col {
+	min-height: 300px;
+	padding-bottom: 40px;
+}
+
+.tab-pane {
+	margin-left: 200px;
+	margin-right: auto;
+	padding-left: 120px;
+	padding-right: 120px;
+	padding-top: 50px;
+}
+
+/* Style the list items */
+.li {
+    cursor: pointer;
+    position: relative;
+    padding: 8px 8px 8px 45px;
+    background: #f7f7f7;
+    font-size: 18px;
+    /*transition: 0.2s;*/
+    display: block;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 12px;
+    border-radius: 4px;
+
+}
+
+/* styling bullet */
+.glyphicon.glyphicon-one-fine-dot {
+    margin-bottom: -.8em;
+    overflow: hidden;
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+    content:"\25cf";
+    font-size: 3em;
+}
+
+
+.li.editing-sublist {
+    background-color: yellow;
+}
+
+/* replace bullets with glyphicon */
+.li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #CCCCCC;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/*.do-li:nth-child(odd) {
+    background: #f9f9f9;
+}*/
+
+/* Darker background-color on hover */
+.li:hover {
+    background: #edeaea;
+}
+
+/* When clicked on, add a background color and strike out text */
+.li.checked-done {
+    background: #6bdb69;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.li.checked-selected {
+	background-color: #0095e0;
+	color: #fff;
+}
+
+.li.goalskill-selected {
+    background-color: #edd040;
+}
+
+/* Add a "checked" mark when clicked on */
+.checked-done::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 30px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/*.unselected-done {
+	opacity: .5;
+}*/
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    padding: 2px 9px 5px 9px;
+    border-radius: 100px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: #fff;
+    padding: 30px 10px;
+    color: black;
+    text-align: left;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    border: none;
+    outline: none;
+    width: auto;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.add-btn {
+    /*padding: 10px;
+    width: 70px;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;*/
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+
+/*  -------------  Styling of other page elements (paragraphs, new list icon, etc) -------------   */
+
+.tab-pane p {
+	margin-top: 130px;
+	font-size: 20px;
+}
+
+.new-list {
+	width: 100%;
+	min-height: 200px;
+	text-align: left;
+	/*background-color: lightgray;*/
+}
+
+.new-list input {
+    font-size: 22px;
+}
+
+.new-list .btn {
+}
+
+
+/*  -------------  Temporary styles -------------   */
+
+.highlighted {
+    background-color: blue;
+}
+
+
+
+
