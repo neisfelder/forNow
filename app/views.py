@@ -4,7 +4,7 @@ from flask import request
 import json
 
 app = Flask(__name__)
-app.config.from_object('config')
+#app.config.from_object('config')
 
 #from app import views, models
 
@@ -25,13 +25,9 @@ app.config.from_object('config')
 #     def __repr__(self):
 #         return '<User %r>' % self.username
 
-
 @app.route('/')
 def index():
     user = {'nickname': 'Noah'}  # fake user
-
-
-
     items = [  # fake array of posts            # EVENTUALLY WILL PULL FROM DATABASE
         {
             'name': {'nickname': 'John'},
@@ -52,10 +48,7 @@ def index():
                 }
         }
     ]
-
-
     listitemslist = items[0]['lists']['all']
-
     return render_template('listpage.html',
                            title='Home',
                            user=user,
