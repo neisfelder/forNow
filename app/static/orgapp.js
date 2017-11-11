@@ -23,9 +23,15 @@
       }
     }
 
+    $('.new-list input').click(function() {
+      document.getElementById('newlist-input').placeholder = "";
+      console.log("switch");
+    });
+
     $('.new-list .btn').click(function() {
       newListName = $("#newlist-input").val();
       createList(newListName);
+      console.log("switch");
       document.getElementById('newlist-input').value = "";
     });
 

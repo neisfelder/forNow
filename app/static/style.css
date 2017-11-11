@@ -290,11 +290,13 @@ input {
 	width: 100%;
 	min-height: 200px;
 	text-align: left;
-	/*background-color: lightgray;*/
+	
 }
 
 .new-list input {
     font-size: 22px;
+    background-color: rgba(234, 231, 231, 0.77);
+    border-radius: 6px;
 }
 
 .new-list .btn {
