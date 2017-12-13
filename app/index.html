@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+	<link rel="stylesheet" href="static/style.css">
+    <title>Dashboard Template for Bootstrap</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+	  	<div class="container">
+
+	  	<div class="tab-content">
+
+	  	 <!-- Navigation between Today and All -->
+	  	 <div class="navSideBar">
+			  <h2>Your Lists</h2>
+			  <ul class="nav nav-items">
+			    <li class="navButton active"><a data-toggle="tab" href="#today-tab">Today <span class="amountLabel" id="todayCount">0</span></a></li>
+			    <li class="navButton"><a data-toggle="tab" href="#all-tab">All</a></li>
+
+			    <li class="navButton sub-nav"><a data-toggle="tab" href="#goals-tab">Goals</a></li>
+			    <li class="navButton sub-nav"><a data-toggle="tab" href="#skills-tab">Skills</a></li>
+				<li class="navButton sub-nav" id="upload"><a class="btn-info" href="">Save</a></li>
+			  </ul>
+		  </div>
+				<div id="today-tab" class="tab-pane single-col-tab active">
+					<div id="myDIV" class="header">
+					  <h2>Do today.</h2>
+					</div>
+
+					<!-- 'do-li' class represents list items in the "today section, meant to be checked off rather than selected -->
+					<ul class="list" id="todayUL">
+					</ul>
+					<input type="text" id="todayInput" placeholder="Add a task">
+					<span onclick="newElement('todayUL','do-li','todayInput')" class="btn org-btn add-btn">Add</span>
+				</div>
+
+				<!-- tab for all to-do notes -->
+				<div id="all-tab" class="tab-pane">
+				  <div class="row list-row">
+
+
+
+
+					</div>
+					<div class="row">
+						<div class="col col-sm-6 col-md-4 col-lg-4 newlist-col">
+							<div class="new-list">
+								<input type="text" id="newlist-input" placeholder="Make a new list"></input>
+								<span class="btn org-btn">new list</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Goals Tab -->
+				<div id="goals-tab" class="tab-pane single-col-tab">
+					<div class="header">
+					  <h2>My goals.</h2>
+					</div>
+
+					<!-- 'do-li' class represents list items in the "today section, meant to be checked off rather than selected -->
+					<ul class="list" id="goalsUL">
+					</ul>
+					<input type="text" id="goalInput" placeholder="Goal">
+					<span onclick="newElement('goalsUL','goal-li','goalInput')" class="btn org-btn add-btn">Add</span>
+					<!--<p>Goals are not tasks. Design tasks that get you toward your goals</p>-->
+				</div>
+
+				<!-- Skills Tab -->
+				<div id="skills-tab" class="tab-pane single-col-tab">
+					<div class="header">
+					  <h2>My skills.</h2>
+					</div>
+
+					<!-- 'do-li' class represents list items in the "today section, meant to be checked off rather than selected -->
+					<ul class="list" id="skillsUL">
+					</ul>
+					<input type="text" id="skillInput" placeholder="Skill I'm working on...">
+					<span onclick="newElement('skillsUL','skill-li','skillInput')" class="btn org-btn add-btn">Add</span>
+					<!--<p>Skills are not tasks. To work on a skill, make a task about it!</p>-->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+  </body>
+  <script src="renderer.js"></script>
+  <script src="static/orgapp.js"></script>
+</html>
