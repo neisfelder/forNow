@@ -34,37 +34,39 @@ html, body, .container-fluid {
 
 .navSideBar {
 	float: left;
-	width: 230px;
+	width: 150px;
 	height: 100%;
     position: fixed;
 	z-index: 1;
-	background-color: #0095e0;
-	padding-left: 30px;
+	background-color: #f7f7f7;
+	/*padding-left: 30px;*/
 }
 
 
 .navButton {
-    width: 100%;
+    width: 150px;
     margin:0px;
-    color: white;
+    color: #3d3d3d;
+    padding: 30px;
+    /*display: block;*/
 }
 
 .navButton a {
     border: none;
     border-radius: 0;
-    color: white;
+    /*color: white;*/
     margin: 0px;
 }
 
-.navButton a:hover {
+/*.navButton a:hover {
     color:#0095e0;
-}
+}*/
 
 .navSideBar h2 {
 	float: left;
-	color: white;
-	font-size: 22px;
-	margin: 30px 30px 30px 10px;
+	font-size: 17px;
+	margin: 20px 20px 20px 20px;
+	color: #8e8e8e;
 }
 
 .nav-items {
