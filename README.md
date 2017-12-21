@@ -1,3 +1,9 @@
+A simple Web Application for keeping track of to-do lists, and focusing on high-priority tasks
+
+
+
+Uses the library below:
+
 
 
 A Demonstration of How to Use Bootstrap and jQuery to Build an Electron Application
